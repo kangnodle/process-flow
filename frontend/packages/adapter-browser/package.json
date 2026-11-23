@@ -1,0 +1,19 @@
+{
+  "name": "@process-flow/adapter-browser",
+  "version": "0.1.0",
+  "private": true,
+  "description": "어댑터: 플랫폼 포트를 브라우저 API(window·document·localStorage·history·타이머)로 구현합니다.",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@process-flow/domain": "0.1.0",
+    "@process-flow/application": "0.1.0"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc -b tsconfig.json tsconfig.test.json"
+  }
+}

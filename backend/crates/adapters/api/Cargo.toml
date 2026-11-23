@@ -1,0 +1,23 @@
+[package]
+name = "process-flow-api"
+description = "표현 계층: Actix Web 라우트, 요청/응답 DTO, 오류 → HTTP 상태 매핑."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]
+process-flow-domain.workspace = true
+process-flow-application.workspace = true
+process-flow-runtime.workspace = true
+actix-web.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+tracing.workspace = true
+
+[dev-dependencies]
+process-flow-testing.workspace = true
+
+[lints]
+workspace = true

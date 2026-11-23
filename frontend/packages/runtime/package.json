@@ -1,0 +1,19 @@
+{
+  "name": "@process-flow/runtime",
+  "version": "0.1.0",
+  "private": true,
+  "description": "워크플로 세션과 메모리 내비게이션의 상태 및 포트 호출을 관리합니다.",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@process-flow/domain": "0.1.0",
+    "@process-flow/application": "0.1.0"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc -b tsconfig.json tsconfig.test.json"
+  }
+}

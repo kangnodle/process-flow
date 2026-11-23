@@ -1,0 +1,19 @@
+{
+  "files": [],
+  "references": [
+    { "path": "./packages/domain/tsconfig.json" },
+    { "path": "./packages/domain/tsconfig.test.json" },
+    { "path": "./packages/application/tsconfig.json" },
+    { "path": "./packages/application/tsconfig.test.json" },
+    { "path": "./packages/adapter-http/tsconfig.json" },
+    { "path": "./packages/adapter-http/tsconfig.test.json" },
+    { "path": "./packages/adapter-browser/tsconfig.json" },
+    { "path": "./packages/adapter-browser/tsconfig.test.json" },
+    { "path": "./packages/runtime/tsconfig.json" },
+    { "path": "./packages/runtime/tsconfig.test.json" },
+    { "path": "./packages/react/tsconfig.json" },
+    { "path": "./packages/ui/tsconfig.json" },
+    { "path": "./apps/web/tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ]
+}

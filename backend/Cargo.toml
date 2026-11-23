@@ -1,0 +1,57 @@
+[workspace]
+resolver = "3"
+members = ["crates/core/*", "crates/adapters/*", "crates/runtime", "crates/testing", "apps/*"]
+default-members = ["apps/server"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.98"
+license = "MIT"
+publish = false
+
+[workspace.dependencies]
+# 내부 크레이트 (Clean Architecture: 의존은 바깥 → 안쪽으로만)
+# core는 정책과 포트 계약, runtime은 유스케이스 실행, adapters는 포트 구현과 HTTP 입구입니다.
+process-flow-domain = { path = "crates/core/domain" }
+process-flow-application = { path = "crates/core/application" }
+process-flow-runtime = { path = "crates/runtime" }
+process-flow-adapter-process-cache = { path = "crates/adapters/process-cache" }
+process-flow-api = { path = "crates/adapters/api" }
+process-flow-adapter-sqlite = { path = "crates/adapters/sqlite" }
+process-flow-adapter-lancedb = { path = "crates/adapters/lancedb" }
+process-flow-adapter-security = { path = "crates/adapters/security" }
+process-flow-adapter-embedding = { path = "crates/adapters/embedding" }
+process-flow-adapter-system = { path = "crates/adapters/system" }
+process-flow-testing = { path = "crates/testing" }
+
+# 외부 크레이트
+actix-cors = "0.7"
+actix-web = "4.19"
+argon2 = "0.5"
+async-trait = "0.1"
+futures-util = { version = "0.3", default-features = false, features = ["async-await-macro"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+sha2 = "0.10"
+thiserror = "2"
+tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "fmt"] }
+uuid = { version = "1", features = ["v4"] }
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+missing_debug_implementations = "warn"
+
+[workspace.lints.clippy]
+all = { level = "warn", priority = -1 }
+
+[profile.dev]
+debug = "line-tables-only"
+
+[profile.dev.package."*"]
+opt-level = 1
+
+[profile.dev.package.lance]
+opt-level = "z"

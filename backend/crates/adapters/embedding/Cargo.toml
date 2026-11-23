@@ -1,0 +1,18 @@
+[package]
+name = "process-flow-adapter-embedding"
+description = "어댑터: Embedder 포트를 외부 호출 없는 로컬 해시 임베더로 구현합니다."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]
+process-flow-application.workspace = true
+async-trait.workspace = true
+
+[dev-dependencies]
+tokio.workspace = true
+
+[lints]
+workspace = true

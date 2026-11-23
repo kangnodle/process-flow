@@ -1,0 +1,15 @@
+{
+  "name": "@process-flow/domain",
+  "version": "0.1.0",
+  "private": true,
+  "description": "도메인(엔터프라이즈 규칙): 공정 모델, 진행 규칙(리듀서·셀렉터), 배정·권한 규칙, 엔터티. 의존성과 부수효과가 없습니다.",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc -b tsconfig.json tsconfig.test.json"
+  }
+}

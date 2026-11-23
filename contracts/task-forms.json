@@ -1,0 +1,1361 @@
+{
+  "goals": [
+    {
+      "id": "problem",
+      "label": {
+        "ko": "해결할 문제",
+        "en": "Problem"
+      },
+      "hint": {
+        "ko": "누가 어떤 상황에서 어떤 불편을 겪는지 적으세요.",
+        "en": "Describe who encounters the problem, when, and its impact."
+      }
+    },
+    {
+      "id": "business-goal",
+      "label": {
+        "ko": "비즈니스 목표",
+        "en": "Business goal"
+      },
+      "hint": {
+        "ko": "문제 해결이 가져올 사업 성과와 목표 시점을 적으세요.",
+        "en": "State the intended business outcome and deadline."
+      }
+    },
+    {
+      "id": "kpi-name",
+      "label": {
+        "ko": "KPI 이름",
+        "en": "KPI name"
+      },
+      "hint": {
+        "ko": "성공을 판단할 지표 이름과 정의를 적으세요.",
+        "en": "Name and define the success metric."
+      }
+    },
+    {
+      "id": "kpi-target",
+      "label": {
+        "ko": "KPI 목표값",
+        "en": "KPI target"
+      },
+      "hint": {
+        "ko": "기준값, 목표값과 달성 기한을 적으세요.",
+        "en": "Record the baseline, target value, and target date."
+      }
+    },
+    {
+      "id": "kpi-method",
+      "label": {
+        "ko": "KPI 측정 방법",
+        "en": "KPI measurement"
+      },
+      "hint": {
+        "ko": "데이터 출처, 측정 주기와 담당자를 적으세요.",
+        "en": "Identify the data source, measurement frequency, and owner."
+      }
+    },
+    {
+      "id": "scope-in",
+      "label": {
+        "ko": "포함 범위",
+        "en": "Included scope"
+      },
+      "hint": {
+        "ko": "이번 프로젝트가 제공할 기능과 대상을 적으세요.",
+        "en": "List the capabilities and audiences included in this project."
+      }
+    },
+    {
+      "id": "scope-out",
+      "label": {
+        "ko": "제외 범위",
+        "en": "Excluded scope"
+      },
+      "hint": {
+        "ko": "이번에 다루지 않을 범위와 이유를 적으세요.",
+        "en": "List excluded capabilities and explain the boundaries."
+      }
+    },
+    {
+      "id": "stakeholders",
+      "label": {
+        "ko": "이해관계자 합의",
+        "en": "Stakeholder agreement"
+      },
+      "hint": {
+        "ko": "의사결정자, 합의 내용과 확인 일자를 적으세요.",
+        "en": "Record decision makers, their agreement, and confirmation date."
+      }
+    }
+  ],
+  "user-research": [
+    {
+      "id": "participants",
+      "label": {
+        "ko": "조사 대상",
+        "en": "Participants"
+      },
+      "hint": {
+        "ko": "사용자 유형, 표본 수와 모집 기준을 적으세요.",
+        "en": "Describe user groups, sample size, and recruitment criteria."
+      }
+    },
+    {
+      "id": "methods",
+      "label": {
+        "ko": "조사 방법",
+        "en": "Methods"
+      },
+      "hint": {
+        "ko": "인터뷰, 설문 또는 데이터 분석 방법과 실시 일자를 적으세요.",
+        "en": "Record research methods and dates."
+      }
+    },
+    {
+      "id": "needs",
+      "label": {
+        "ko": "사용자 니즈",
+        "en": "User needs"
+      },
+      "hint": {
+        "ko": "관찰한 니즈와 이를 뒷받침하는 발언이나 데이터를 적으세요.",
+        "en": "Describe observed needs and supporting quotes or data."
+      }
+    },
+    {
+      "id": "pain-points",
+      "label": {
+        "ko": "불편과 원인",
+        "en": "Pain points"
+      },
+      "hint": {
+        "ko": "주요 불편, 발생 상황과 원인을 적으세요.",
+        "en": "Describe key frustrations, context, and causes."
+      }
+    },
+    {
+      "id": "competitors",
+      "label": {
+        "ko": "경쟁 서비스 분석",
+        "en": "Competitive analysis"
+      },
+      "hint": {
+        "ko": "비교 대상, 비교 기준, 차별화 기회를 적으세요.",
+        "en": "Record alternatives, comparison criteria, and opportunities."
+      }
+    },
+    {
+      "id": "findings",
+      "label": {
+        "ko": "핵심 발견과 적용",
+        "en": "Findings and decisions"
+      },
+      "hint": {
+        "ko": "조사 결과가 제품 결정에 어떻게 반영되는지 적으세요.",
+        "en": "Explain how findings inform product decisions."
+      }
+    }
+  ],
+  "user-modeling": [
+    {
+      "id": "personas",
+      "label": {
+        "ko": "대표 페르소나",
+        "en": "Personas"
+      },
+      "hint": {
+        "ko": "대표 사용자의 역할, 목표, 역량과 제약을 적으세요.",
+        "en": "Describe representative roles, goals, abilities, and constraints."
+      }
+    },
+    {
+      "id": "scenarios",
+      "label": {
+        "ko": "사용 시나리오",
+        "en": "Usage scenarios"
+      },
+      "hint": {
+        "ko": "사용 계기, 환경과 이루려는 일을 적으세요.",
+        "en": "Describe triggers, context, and desired outcomes."
+      }
+    },
+    {
+      "id": "journey",
+      "label": {
+        "ko": "사용자 여정",
+        "en": "User journey"
+      },
+      "hint": {
+        "ko": "단계별 행동, 접점, 감정과 불편을 적으세요.",
+        "en": "Map actions, touchpoints, emotions, and frustrations by step."
+      }
+    },
+    {
+      "id": "opportunities",
+      "label": {
+        "ko": "개선 기회",
+        "en": "Opportunities"
+      },
+      "hint": {
+        "ko": "여정의 문제에 대응할 개선 기회와 우선순위를 적으세요.",
+        "en": "Prioritize improvements tied to journey problems."
+      }
+    }
+  ],
+  "requirements": [
+    {
+      "id": "functional",
+      "label": {
+        "ko": "기능 요구사항",
+        "en": "Functional requirements"
+      },
+      "hint": {
+        "ko": "요구사항 ID별 동작과 인수 조건을 적으세요.",
+        "en": "List behavior and acceptance criteria for each requirement ID."
+      }
+    },
+    {
+      "id": "non-functional",
+      "label": {
+        "ko": "비기능 요구사항",
+        "en": "Non-functional requirements"
+      },
+      "hint": {
+        "ko": "성능, 보안, 접근성 등 측정 가능한 품질 기준을 적으세요.",
+        "en": "State measurable performance, security, and accessibility criteria."
+      }
+    },
+    {
+      "id": "user-stories",
+      "label": {
+        "ko": "유저 스토리",
+        "en": "User stories"
+      },
+      "hint": {
+        "ko": "사용자, 원하는 행동, 얻는 가치를 적으세요.",
+        "en": "Describe the user, desired action, and resulting value."
+      }
+    },
+    {
+      "id": "priorities",
+      "label": {
+        "ko": "우선순위",
+        "en": "Priorities"
+      },
+      "hint": {
+        "ko": "요구사항별 우선순위와 판단 근거를 적으세요.",
+        "en": "Rank requirements and explain the reasoning."
+      }
+    },
+    {
+      "id": "mvp-in",
+      "label": {
+        "ko": "MVP 포함 범위",
+        "en": "MVP inclusions"
+      },
+      "hint": {
+        "ko": "첫 출시에 반드시 필요한 기능을 적으세요.",
+        "en": "List functionality required for the first release."
+      }
+    },
+    {
+      "id": "mvp-out",
+      "label": {
+        "ko": "MVP 제외 범위",
+        "en": "MVP exclusions"
+      },
+      "hint": {
+        "ko": "후속 출시로 미루는 항목과 이유를 적으세요.",
+        "en": "List deferred items and explain why."
+      }
+    }
+  ],
+  "information-architecture": [
+    {
+      "id": "content",
+      "label": {
+        "ko": "콘텐츠 목록",
+        "en": "Content inventory"
+      },
+      "hint": {
+        "ko": "콘텐츠 유형, 목적, 소유자를 적으세요.",
+        "en": "List content types, purposes, and owners."
+      }
+    },
+    {
+      "id": "screens",
+      "label": {
+        "ko": "화면 목록",
+        "en": "Screen inventory"
+      },
+      "hint": {
+        "ko": "화면 ID, 이름과 핵심 역할을 적으세요.",
+        "en": "List screen IDs, names, and responsibilities."
+      }
+    },
+    {
+      "id": "hierarchy",
+      "label": {
+        "ko": "사이트맵 계층",
+        "en": "Sitemap hierarchy"
+      },
+      "hint": {
+        "ko": "화면과 콘텐츠의 부모·자식 관계를 적으세요.",
+        "en": "Describe parent-child relationships between screens and content."
+      }
+    },
+    {
+      "id": "navigation",
+      "label": {
+        "ko": "메뉴와 탐색 규칙",
+        "en": "Navigation"
+      },
+      "hint": {
+        "ko": "메뉴 이름, 진입점과 이동 규칙을 적으세요.",
+        "en": "Define menu labels, entry points, and navigation rules."
+      }
+    }
+  ],
+  "user-flows": [
+    {
+      "id": "entry-exit",
+      "label": {
+        "ko": "시작과 종료 조건",
+        "en": "Entry and exit conditions"
+      },
+      "hint": {
+        "ko": "핵심 작업별 시작 조건과 성공 상태를 적으세요.",
+        "en": "Describe starting conditions and success states for key tasks."
+      }
+    },
+    {
+      "id": "happy-path",
+      "label": {
+        "ko": "정상 경로",
+        "en": "Happy path"
+      },
+      "hint": {
+        "ko": "사용자 행동과 화면 전환을 순서대로 적으세요.",
+        "en": "List user actions and screen transitions in order."
+      }
+    },
+    {
+      "id": "errors",
+      "label": {
+        "ko": "오류 경로",
+        "en": "Error paths"
+      },
+      "hint": {
+        "ko": "실패 원인, 안내 문구와 복구 방법을 적으세요.",
+        "en": "Describe failure causes, messages, and recovery actions."
+      }
+    },
+    {
+      "id": "empty-states",
+      "label": {
+        "ko": "빈 상태",
+        "en": "Empty states"
+      },
+      "hint": {
+        "ko": "데이터가 없을 때의 안내와 다음 행동을 적으세요.",
+        "en": "Describe messages and next actions when data is absent."
+      }
+    },
+    {
+      "id": "exceptions",
+      "label": {
+        "ko": "예외 경로",
+        "en": "Exception paths"
+      },
+      "hint": {
+        "ko": "취소, 권한 부족, 중단 후 재개 등 예외 처리를 적으세요.",
+        "en": "Cover cancellation, missing permissions, and resuming interrupted work."
+      }
+    }
+  ],
+  "constraints": [
+    {
+      "id": "platform",
+      "label": {
+        "ko": "플랫폼 제약",
+        "en": "Platform constraints"
+      },
+      "hint": {
+        "ko": "지원 플랫폼과 기기 및 버전 범위를 적으세요.",
+        "en": "Specify supported platforms, devices, and versions."
+      }
+    },
+    {
+      "id": "technology",
+      "label": {
+        "ko": "기술 제약",
+        "en": "Technology constraints"
+      },
+      "hint": {
+        "ko": "사용해야 할 기술과 기술적 한계를 적으세요.",
+        "en": "Describe required technologies and technical limitations."
+      }
+    },
+    {
+      "id": "schedule",
+      "label": {
+        "ko": "일정 제약",
+        "en": "Schedule constraints"
+      },
+      "hint": {
+        "ko": "마감일, 주요 일정과 일정 위험을 적으세요.",
+        "en": "Record deadlines, milestones, and schedule risks."
+      }
+    },
+    {
+      "id": "budget",
+      "label": {
+        "ko": "예산 제약",
+        "en": "Budget constraints"
+      },
+      "hint": {
+        "ko": "예산 한도, 비용 가정과 승인 담당자를 적으세요.",
+        "en": "Record spending limits, cost assumptions, and approver."
+      }
+    },
+    {
+      "id": "legal",
+      "label": {
+        "ko": "법과 규제",
+        "en": "Legal and regulatory constraints"
+      },
+      "hint": {
+        "ko": "적용 의무와 확인 근거를 적으세요. 적용이 없다면 검토 범위를 설명하세요.",
+        "en": "Record applicable obligations and verification; explain the review scope if none apply."
+      }
+    },
+    {
+      "id": "integrations",
+      "label": {
+        "ko": "기존 시스템 연동",
+        "en": "Legacy integrations"
+      },
+      "hint": {
+        "ko": "연동 대상, 인터페이스와 의존 조건을 적으세요.",
+        "en": "Identify systems, interfaces, and dependencies."
+      }
+    }
+  ],
+  "wireframes": [
+    {
+      "id": "screen-layouts",
+      "label": {
+        "ko": "화면별 레이아웃",
+        "en": "Screen layouts"
+      },
+      "hint": {
+        "ko": "화면 ID별 영역과 정보 우선순위를 적으세요.",
+        "en": "Describe regions and information priority for each screen ID."
+      }
+    },
+    {
+      "id": "elements",
+      "label": {
+        "ko": "요소 배치",
+        "en": "Element placement"
+      },
+      "hint": {
+        "ko": "입력, 버튼, 콘텐츠의 배치와 근거를 적으세요.",
+        "en": "Describe placement of inputs, actions, and content and why."
+      }
+    },
+    {
+      "id": "connections",
+      "label": {
+        "ko": "화면 연결",
+        "en": "Screen connections"
+      },
+      "hint": {
+        "ko": "각 주요 동작이 연결하는 화면을 적으세요.",
+        "en": "Map key actions to destination screens."
+      }
+    },
+    {
+      "id": "review",
+      "label": {
+        "ko": "구조 검토 결과",
+        "en": "Structure review"
+      },
+      "hint": {
+        "ko": "검토자, 발견 사항과 수정 결과를 적으세요.",
+        "en": "Record reviewers, findings, and revisions."
+      }
+    }
+  ],
+  "prototyping": [
+    {
+      "id": "prototype",
+      "label": {
+        "ko": "프로토타입 범위",
+        "en": "Prototype scope"
+      },
+      "hint": {
+        "ko": "작동하는 흐름과 구현 충실도를 적으세요.",
+        "en": "Describe interactive flows and prototype fidelity."
+      }
+    },
+    {
+      "id": "test-plan",
+      "label": {
+        "ko": "사용성 테스트 계획",
+        "en": "Usability test plan"
+      },
+      "hint": {
+        "ko": "참여자, 과제와 성공 기준을 적으세요.",
+        "en": "Specify participants, tasks, and success criteria."
+      }
+    },
+    {
+      "id": "observations",
+      "label": {
+        "ko": "관찰 결과",
+        "en": "Observations"
+      },
+      "hint": {
+        "ko": "과제 성공률, 어려움과 사용자 발언을 적으세요.",
+        "en": "Record task success, difficulties, and participant feedback."
+      }
+    },
+    {
+      "id": "revisions",
+      "label": {
+        "ko": "수정과 재검증",
+        "en": "Revisions and retesting"
+      },
+      "hint": {
+        "ko": "발견한 문제의 수정 내용과 재검증 결과를 적으세요.",
+        "en": "Describe fixes and retest results for observed issues."
+      }
+    }
+  ],
+  "visual-design": [
+    {
+      "id": "colors",
+      "label": {
+        "ko": "색상 체계",
+        "en": "Colors"
+      },
+      "hint": {
+        "ko": "색상 역할, 값과 대비 검증 결과를 적으세요.",
+        "en": "Define color roles and values and document contrast checks."
+      }
+    },
+    {
+      "id": "typography",
+      "label": {
+        "ko": "타이포그래피",
+        "en": "Typography"
+      },
+      "hint": {
+        "ko": "서체, 크기, 굵기와 계층을 적으세요.",
+        "en": "Specify fonts, sizes, weights, and hierarchy."
+      }
+    },
+    {
+      "id": "assets",
+      "label": {
+        "ko": "아이콘과 이미지",
+        "en": "Icons and imagery"
+      },
+      "hint": {
+        "ko": "에셋 사용 규칙과 출처 또는 라이선스를 적으세요.",
+        "en": "Describe asset rules, sources, and licenses."
+      }
+    },
+    {
+      "id": "mockups",
+      "label": {
+        "ko": "화면 시안",
+        "en": "Screen mockups"
+      },
+      "hint": {
+        "ko": "화면별 시안 범위와 주요 상태를 적으세요.",
+        "en": "Describe mockup coverage and important states per screen."
+      }
+    }
+  ],
+  "design-system": [
+    {
+      "id": "tokens",
+      "label": {
+        "ko": "디자인 토큰",
+        "en": "Design tokens"
+      },
+      "hint": {
+        "ko": "색상, 간격, 글꼴 토큰의 이름과 값을 적으세요.",
+        "en": "Define names and values for color, spacing, and typography tokens."
+      }
+    },
+    {
+      "id": "components",
+      "label": {
+        "ko": "공통 컴포넌트",
+        "en": "Shared components"
+      },
+      "hint": {
+        "ko": "컴포넌트별 목적, 속성과 사용 예를 적으세요.",
+        "en": "Describe each component's purpose, properties, and usage."
+      }
+    },
+    {
+      "id": "states",
+      "label": {
+        "ko": "컴포넌트 상태",
+        "en": "Component states"
+      },
+      "hint": {
+        "ko": "기본, 포커스, 비활성, 오류, 로딩 상태를 적으세요.",
+        "en": "Define default, focus, disabled, error, and loading states."
+      }
+    },
+    {
+      "id": "accessibility",
+      "label": {
+        "ko": "접근성 규칙",
+        "en": "Accessibility rules"
+      },
+      "hint": {
+        "ko": "키보드 조작, 이름과 보조기술 지원 규칙을 적으세요.",
+        "en": "Define keyboard operation, accessible naming, and assistive support."
+      }
+    }
+  ],
+  "technical-design": [
+    {
+      "id": "architecture",
+      "label": {
+        "ko": "시스템 아키텍처",
+        "en": "System architecture"
+      },
+      "hint": {
+        "ko": "구성 요소, 책임과 데이터 흐름을 적으세요.",
+        "en": "Describe components, responsibilities, and data flows."
+      }
+    },
+    {
+      "id": "stack",
+      "label": {
+        "ko": "기술 스택",
+        "en": "Technology stack"
+      },
+      "hint": {
+        "ko": "선택한 기술과 선택 근거를 적으세요.",
+        "en": "Record technology choices and rationale."
+      }
+    },
+    {
+      "id": "data-model",
+      "label": {
+        "ko": "데이터 모델",
+        "en": "Data model"
+      },
+      "hint": {
+        "ko": "엔터티, 키, 관계와 무결성 규칙을 적으세요.",
+        "en": "Define entities, keys, relationships, and integrity rules."
+      }
+    },
+    {
+      "id": "api",
+      "label": {
+        "ko": "API 명세",
+        "en": "API specification"
+      },
+      "hint": {
+        "ko": "엔드포인트, 입력, 출력과 오류 계약을 적으세요.",
+        "en": "Define endpoints, inputs, outputs, and error contracts."
+      }
+    },
+    {
+      "id": "security",
+      "label": {
+        "ko": "보안 설계",
+        "en": "Security design"
+      },
+      "hint": {
+        "ko": "인증, 권한, 민감정보 보호와 위협 대응을 적으세요.",
+        "en": "Describe authentication, authorization, data protection, and threat controls."
+      }
+    }
+  ],
+  "design-handoff": [
+    {
+      "id": "specification",
+      "label": {
+        "ko": "화면 명세",
+        "en": "Screen specification"
+      },
+      "hint": {
+        "ko": "화면별 요소와 개발에 필요한 동작을 적으세요.",
+        "en": "Document elements and implementable behavior for each screen."
+      }
+    },
+    {
+      "id": "spacing",
+      "label": {
+        "ko": "간격과 치수",
+        "en": "Spacing and dimensions"
+      },
+      "hint": {
+        "ko": "여백, 크기와 정렬 규칙을 적으세요.",
+        "en": "Specify margins, sizes, and alignment rules."
+      }
+    },
+    {
+      "id": "breakpoints",
+      "label": {
+        "ko": "반응형 기준점",
+        "en": "Responsive breakpoints"
+      },
+      "hint": {
+        "ko": "화면 너비별 레이아웃 변화와 기준값을 적으세요.",
+        "en": "Define breakpoint values and corresponding layout changes."
+      }
+    },
+    {
+      "id": "interactions",
+      "label": {
+        "ko": "인터랙션",
+        "en": "Interactions"
+      },
+      "hint": {
+        "ko": "조작, 전환, 피드백과 애니메이션 규칙을 적으세요.",
+        "en": "Describe actions, transitions, feedback, and animation rules."
+      }
+    },
+    {
+      "id": "edge-cases",
+      "label": {
+        "ko": "엣지 케이스",
+        "en": "Edge cases"
+      },
+      "hint": {
+        "ko": "긴 텍스트, 오류, 빈 상태 등 처리 규칙을 적으세요.",
+        "en": "Cover long text, errors, empty data, and other edge cases."
+      }
+    },
+    {
+      "id": "handoff",
+      "label": {
+        "ko": "인계 확인",
+        "en": "Handoff confirmation"
+      },
+      "hint": {
+        "ko": "인수 개발자, 질의 해결 내용과 확인 일자를 적으세요.",
+        "en": "Record receiving developers, resolved questions, and confirmation date."
+      }
+    }
+  ],
+  "dev-environment": [
+    {
+      "id": "repository",
+      "label": {
+        "ko": "저장소 설정",
+        "en": "Repository setup"
+      },
+      "hint": {
+        "ko": "저장소 위치, 접근 권한과 시작 방법을 적으세요.",
+        "en": "Record repository location, permissions, and setup instructions."
+      }
+    },
+    {
+      "id": "branching",
+      "label": {
+        "ko": "브랜치 전략",
+        "en": "Branching strategy"
+      },
+      "hint": {
+        "ko": "브랜치 용도, 병합과 보호 규칙을 적으세요.",
+        "en": "Define branch purposes, merge rules, and protections."
+      }
+    },
+    {
+      "id": "conventions",
+      "label": {
+        "ko": "코딩 규칙",
+        "en": "Coding conventions"
+      },
+      "hint": {
+        "ko": "포맷, 린트와 코드 작성 규칙을 적으세요.",
+        "en": "Specify formatting, linting, and coding conventions."
+      }
+    },
+    {
+      "id": "ci-cd",
+      "label": {
+        "ko": "CI/CD",
+        "en": "CI/CD pipeline"
+      },
+      "hint": {
+        "ko": "빌드, 테스트, 배포 단계와 검증 결과를 적으세요.",
+        "en": "Describe build, test, deploy stages and verification results."
+      }
+    },
+    {
+      "id": "environments",
+      "label": {
+        "ko": "실행 환경",
+        "en": "Environments"
+      },
+      "hint": {
+        "ko": "개발, 스테이징, 운영 환경과 설정 관리 방법을 적으세요.",
+        "en": "Describe development, staging, production, and configuration management."
+      }
+    }
+  ],
+  "implementation": [
+    {
+      "id": "features",
+      "label": {
+        "ko": "구현한 기능",
+        "en": "Implemented features"
+      },
+      "hint": {
+        "ko": "요구사항 ID와 구현 기능을 연결해 적으세요.",
+        "en": "Map implemented features to requirement IDs."
+      }
+    },
+    {
+      "id": "frontend",
+      "label": {
+        "ko": "프론트엔드 구현",
+        "en": "Frontend implementation"
+      },
+      "hint": {
+        "ko": "화면, 상태 처리와 사용자 상호작용 구현을 적으세요.",
+        "en": "Describe screens, state handling, and interactions implemented."
+      }
+    },
+    {
+      "id": "backend",
+      "label": {
+        "ko": "백엔드 구현",
+        "en": "Backend implementation"
+      },
+      "hint": {
+        "ko": "서비스 규칙, 데이터 처리와 오류 처리를 적으세요.",
+        "en": "Describe service rules, data handling, and errors implemented."
+      }
+    },
+    {
+      "id": "integration",
+      "label": {
+        "ko": "API 연동",
+        "en": "API integration"
+      },
+      "hint": {
+        "ko": "연동 계약, 인증과 실패 처리의 검증 결과를 적으세요.",
+        "en": "Record verification of contracts, authentication, and failure handling."
+      }
+    },
+    {
+      "id": "verification",
+      "label": {
+        "ko": "구현 검증",
+        "en": "Implementation verification"
+      },
+      "hint": {
+        "ko": "빌드 결과, 실행 확인과 남은 문제의 처리 내용을 적으세요.",
+        "en": "Record build results, runtime checks, and disposition of remaining issues."
+      }
+    }
+  ],
+  "unit-testing": [
+    {
+      "id": "coverage",
+      "label": {
+        "ko": "테스트 대상",
+        "en": "Test scope"
+      },
+      "hint": {
+        "ko": "기능별 정상, 경계, 실패 조건을 적으세요.",
+        "en": "List normal, boundary, and failure cases per feature."
+      }
+    },
+    {
+      "id": "results",
+      "label": {
+        "ko": "테스트 실행 결과",
+        "en": "Test results"
+      },
+      "hint": {
+        "ko": "실행 명령, 환경, 통과와 실패 수를 적으세요.",
+        "en": "Record commands, environment, and pass/fail counts."
+      }
+    },
+    {
+      "id": "reviewers",
+      "label": {
+        "ko": "코드 리뷰",
+        "en": "Code review"
+      },
+      "hint": {
+        "ko": "리뷰어, 검토 범위와 주요 의견을 적으세요.",
+        "en": "Identify reviewers, scope, and key feedback."
+      }
+    },
+    {
+      "id": "resolutions",
+      "label": {
+        "ko": "수정과 재확인",
+        "en": "Resolutions"
+      },
+      "hint": {
+        "ko": "실패와 리뷰 의견의 처리 및 재실행 결과를 적으세요.",
+        "en": "Record issue resolutions and verification after fixes."
+      }
+    }
+  ],
+  "integration-testing": [
+    {
+      "id": "interfaces",
+      "label": {
+        "ko": "연동 대상",
+        "en": "Integration scope"
+      },
+      "hint": {
+        "ko": "모듈과 인터페이스 및 테스트 환경을 적으세요.",
+        "en": "Identify modules, interfaces, and the test environment."
+      }
+    },
+    {
+      "id": "scenarios",
+      "label": {
+        "ko": "E2E 시나리오",
+        "en": "End-to-end scenarios"
+      },
+      "hint": {
+        "ko": "요구사항별 전체 사용자 시나리오와 예상 결과를 적으세요.",
+        "en": "Map complete user scenarios and expected outcomes to requirements."
+      }
+    },
+    {
+      "id": "results",
+      "label": {
+        "ko": "실행 결과",
+        "en": "Execution results"
+      },
+      "hint": {
+        "ko": "실제 결과와 통과·실패 내역을 적으세요.",
+        "en": "Record actual results and passing/failing cases."
+      }
+    },
+    {
+      "id": "defects",
+      "label": {
+        "ko": "결함 해결",
+        "en": "Defect resolution"
+      },
+      "hint": {
+        "ko": "결함별 조치와 재검증 결과를 적으세요. 결함이 없으면 검증 범위를 설명하세요.",
+        "en": "Describe defect fixes and retests, or document verified scope if no defects were found."
+      }
+    }
+  ],
+  "non-functional-testing": [
+    {
+      "id": "performance",
+      "label": {
+        "ko": "성능과 부하",
+        "en": "Performance and load"
+      },
+      "hint": {
+        "ko": "부하 조건, 응답 시간과 기준 충족 결과를 적으세요.",
+        "en": "Record load conditions, timings, and compliance with targets."
+      }
+    },
+    {
+      "id": "security",
+      "label": {
+        "ko": "보안 점검",
+        "en": "Security checks"
+      },
+      "hint": {
+        "ko": "점검 범위, 취약점과 조치 결과를 적으세요.",
+        "en": "Record security scope, findings, and remediation."
+      }
+    },
+    {
+      "id": "accessibility",
+      "label": {
+        "ko": "접근성 점검",
+        "en": "Accessibility checks"
+      },
+      "hint": {
+        "ko": "기준, 수동·자동 검사와 개선 결과를 적으세요.",
+        "en": "Record standards, manual/automated checks, and fixes."
+      }
+    },
+    {
+      "id": "compatibility",
+      "label": {
+        "ko": "호환성 점검",
+        "en": "Compatibility checks"
+      },
+      "hint": {
+        "ko": "기기·브라우저별 검증 결과를 적으세요.",
+        "en": "Record verification results by device and browser."
+      }
+    }
+  ],
+  "acceptance-testing": [
+    {
+      "id": "acceptors",
+      "label": {
+        "ko": "인수 담당자",
+        "en": "Acceptance participants"
+      },
+      "hint": {
+        "ko": "발주자 또는 사용자와 그 역할을 적으세요.",
+        "en": "Identify client or user participants and their roles."
+      }
+    },
+    {
+      "id": "criteria",
+      "label": {
+        "ko": "인수 기준",
+        "en": "Acceptance criteria"
+      },
+      "hint": {
+        "ko": "요구사항별 인수 조건과 범위를 적으세요.",
+        "en": "Map acceptance conditions and scope to requirements."
+      }
+    },
+    {
+      "id": "results",
+      "label": {
+        "ko": "인수 실행 결과",
+        "en": "Acceptance results"
+      },
+      "hint": {
+        "ko": "시나리오별 실제 결과와 확인 일자를 적으세요.",
+        "en": "Record actual outcomes and verification dates per scenario."
+      }
+    },
+    {
+      "id": "signoff",
+      "label": {
+        "ko": "인수 확인",
+        "en": "Acceptance sign-off"
+      },
+      "hint": {
+        "ko": "확인자, 승인 내용과 잔여 문제 처리 합의를 적으세요.",
+        "en": "Record signatories, approval details, and agreement on remaining issues."
+      }
+    }
+  ],
+  "release-prep": [
+    {
+      "id": "infrastructure",
+      "label": {
+        "ko": "운영 인프라",
+        "en": "Production infrastructure"
+      },
+      "hint": {
+        "ko": "자원, 설정, 접근 권한과 준비 확인 결과를 적으세요.",
+        "en": "Record resources, configuration, permissions, and readiness checks."
+      }
+    },
+    {
+      "id": "observability",
+      "label": {
+        "ko": "모니터링과 로그",
+        "en": "Monitoring and logs"
+      },
+      "hint": {
+        "ko": "관측 지표, 경보, 로그와 담당자를 적으세요.",
+        "en": "Define metrics, alerts, logs, and owners."
+      }
+    },
+    {
+      "id": "backup",
+      "label": {
+        "ko": "백업과 복구",
+        "en": "Backup and restore"
+      },
+      "hint": {
+        "ko": "백업 주기, 보관 정책과 복구 검증 결과를 적으세요.",
+        "en": "Record backup schedule, retention, and restore verification."
+      }
+    },
+    {
+      "id": "rollback",
+      "label": {
+        "ko": "롤백 계획",
+        "en": "Rollback plan"
+      },
+      "hint": {
+        "ko": "롤백 조건, 실행 절차와 담당자를 적으세요.",
+        "en": "Specify rollback triggers, steps, and responsible people."
+      }
+    },
+    {
+      "id": "release-plan",
+      "label": {
+        "ko": "배포 계획",
+        "en": "Release plan"
+      },
+      "hint": {
+        "ko": "배포 일정, 순서, 확인 항목과 승인자를 적으세요.",
+        "en": "Record release schedule, sequence, checks, and approver."
+      }
+    },
+    {
+      "id": "store-review",
+      "label": {
+        "ko": "배포 채널 검토",
+        "en": "Distribution review"
+      },
+      "hint": {
+        "ko": "앱 심사 결과 또는 해당 배포 채널의 출시 요건 확인 결과를 적으세요.",
+        "en": "Record app review results or readiness for the applicable distribution channel."
+      }
+    }
+  ],
+  "deployment": [
+    {
+      "id": "version",
+      "label": {
+        "ko": "출시 버전",
+        "en": "Release version"
+      },
+      "hint": {
+        "ko": "버전, 변경 내역과 배포 일시를 적으세요.",
+        "en": "Record version, changes, and deployment time."
+      }
+    },
+    {
+      "id": "rollout",
+      "label": {
+        "ko": "단계적 배포",
+        "en": "Staged rollout"
+      },
+      "hint": {
+        "ko": "배포 대상, 확대 기준과 중단 조건을 적으세요.",
+        "en": "Describe rollout cohorts, expansion criteria, and stop conditions."
+      }
+    },
+    {
+      "id": "verification",
+      "label": {
+        "ko": "배포 후 검증",
+        "en": "Post-deploy verification"
+      },
+      "hint": {
+        "ko": "핵심 기능, 지표와 오류 확인 결과를 적으세요.",
+        "en": "Record verification of key features, metrics, and errors."
+      }
+    },
+    {
+      "id": "communication",
+      "label": {
+        "ko": "사용자 안내",
+        "en": "User communication"
+      },
+      "hint": {
+        "ko": "릴리스 노트, 영향과 안내 채널을 적으세요.",
+        "en": "Record release notes, user impact, and communication channels."
+      }
+    },
+    {
+      "id": "support",
+      "label": {
+        "ko": "고객 지원 준비",
+        "en": "Support readiness"
+      },
+      "hint": {
+        "ko": "문의 대응 담당자, 절차와 알려진 문제 안내를 적으세요.",
+        "en": "Record support owners, procedures, and known-issue guidance."
+      }
+    }
+  ],
+  "monitoring": [
+    {
+      "id": "signals",
+      "label": {
+        "ko": "운영 지표",
+        "en": "Operational signals"
+      },
+      "hint": {
+        "ko": "서비스 상태, 성능과 경보 임계값을 적으세요.",
+        "en": "Define health/performance metrics and alert thresholds."
+      }
+    },
+    {
+      "id": "response",
+      "label": {
+        "ko": "장애 대응",
+        "en": "Incident response"
+      },
+      "hint": {
+        "ko": "담당자, 연락 체계와 대응 절차를 적으세요.",
+        "en": "Record responders, escalation contacts, and response procedures."
+      }
+    },
+    {
+      "id": "incidents",
+      "label": {
+        "ko": "장애 기록",
+        "en": "Incident record"
+      },
+      "hint": {
+        "ko": "발생 장애, 영향과 조치를 적으세요. 없으면 관측 기간과 결과를 설명하세요.",
+        "en": "Record incidents, impact, and actions, or the incident-free observation period."
+      }
+    },
+    {
+      "id": "patching",
+      "label": {
+        "ko": "성능과 보안 패치",
+        "en": "Performance and security patches"
+      },
+      "hint": {
+        "ko": "점검 내역, 필요한 패치와 적용 검증을 적으세요.",
+        "en": "Record checks, required patches, and deployment verification."
+      }
+    }
+  ],
+  "feedback-analysis": [
+    {
+      "id": "kpi-results",
+      "label": {
+        "ko": "KPI 측정 결과",
+        "en": "KPI results"
+      },
+      "hint": {
+        "ko": "기간, 지표별 실적과 목표 대비 차이를 적으세요.",
+        "en": "Record measurement period, actual metrics, and target gaps."
+      }
+    },
+    {
+      "id": "behavior",
+      "label": {
+        "ko": "사용자 행동 분석",
+        "en": "User behavior"
+      },
+      "hint": {
+        "ko": "핵심 경로, 이탈과 행동 패턴을 적으세요.",
+        "en": "Describe key paths, drop-off, and behavior patterns."
+      }
+    },
+    {
+      "id": "feedback",
+      "label": {
+        "ko": "문의와 리뷰",
+        "en": "Inquiries and reviews"
+      },
+      "hint": {
+        "ko": "피드백 출처, 주요 주제와 빈도를 적으세요.",
+        "en": "Record feedback sources, themes, and frequency."
+      }
+    },
+    {
+      "id": "insights",
+      "label": {
+        "ko": "분석 결론",
+        "en": "Insights"
+      },
+      "hint": {
+        "ko": "근거가 있는 원인 가설과 개선 제안을 적으세요.",
+        "en": "Describe evidence-backed causes and improvement proposals."
+      }
+    }
+  ],
+  "maintenance": [
+    {
+      "id": "issues",
+      "label": {
+        "ko": "유지보수 대상",
+        "en": "Maintenance scope"
+      },
+      "hint": {
+        "ko": "버그, 환경 변화와 개선 요청을 식별해 적으세요.",
+        "en": "Identify bugs, environment changes, and improvement requests."
+      }
+    },
+    {
+      "id": "changes",
+      "label": {
+        "ko": "변경 내용",
+        "en": "Changes"
+      },
+      "hint": {
+        "ko": "수정, 개선과 리팩터링 내용을 적으세요.",
+        "en": "Describe fixes, improvements, and refactoring."
+      }
+    },
+    {
+      "id": "verification",
+      "label": {
+        "ko": "회귀 검증",
+        "en": "Regression verification"
+      },
+      "hint": {
+        "ko": "영향 범위와 테스트 결과를 적으세요.",
+        "en": "Record affected areas and regression test results."
+      }
+    },
+    {
+      "id": "change-log",
+      "label": {
+        "ko": "변경 이력",
+        "en": "Change log"
+      },
+      "hint": {
+        "ko": "버전, 적용 일자, 담당자와 운영 영향을 적으세요.",
+        "en": "Record version, date, owner, and operational impact."
+      }
+    }
+  ],
+  "iteration": [
+    {
+      "id": "opportunities",
+      "label": {
+        "ko": "다음 개선 과제",
+        "en": "Next improvements"
+      },
+      "hint": {
+        "ko": "분석 결과와 연결된 개선 과제를 적으세요.",
+        "en": "Identify improvements tied to analysis findings."
+      }
+    },
+    {
+      "id": "priorities",
+      "label": {
+        "ko": "개선 우선순위",
+        "en": "Improvement priorities"
+      },
+      "hint": {
+        "ko": "효과, 비용과 위험에 따른 순위를 적으세요.",
+        "en": "Rank improvements by impact, cost, and risk."
+      }
+    },
+    {
+      "id": "backlog",
+      "label": {
+        "ko": "개선 백로그",
+        "en": "Improvement backlog"
+      },
+      "hint": {
+        "ko": "과제별 목표, 담당자와 완료 조건을 적으세요.",
+        "en": "Define goals, owners, and acceptance criteria for backlog items."
+      }
+    },
+    {
+      "id": "next-cycle",
+      "label": {
+        "ko": "다음 주기 계획",
+        "en": "Next cycle plan"
+      },
+      "hint": {
+        "ko": "기획으로 넘길 범위, 일정과 확인할 가설을 적으세요.",
+        "en": "Record the scope, schedule, and hypotheses for the next planning cycle."
+      }
+    }
+  ]
+}

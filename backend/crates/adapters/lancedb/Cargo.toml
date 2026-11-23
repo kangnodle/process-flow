@@ -1,0 +1,24 @@
+[package]
+name = "process-flow-adapter-lancedb"
+description = "LanceDB vector search adapter"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]
+arrow-array = "58"
+arrow-schema = "58"
+async-trait.workspace = true
+futures-util.workspace = true
+lancedb = { version = "=0.41.0", default-features = false }
+process-flow-application.workspace = true
+process-flow-domain.workspace = true
+tokio = { workspace = true, features = ["sync"] }
+
+[dev-dependencies]
+tempfile = "3"
+
+[lints]
+workspace = true

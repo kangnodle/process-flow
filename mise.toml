@@ -1,0 +1,251 @@
+# process-flow 모노레포 (frontend + backend) mise 설정
+# 사용법:
+#   mise install            # Node.js / Rust 툴체인 설치
+#   mise tasks              # 사용 가능한 전체 태스크 목록 확인
+#   mise run check          # 전체(frontend + backend) 포맷·린트·타입·테스트 검사
+#   mise run fe:dev         # 프론트엔드 개발 서버 실행
+#   mise run be:dev         # 백엔드 API 서버 실행
+#   mise run dev            # 프론트엔드 + 백엔드 개발 서버 동시 실행
+
+min_version = "2024.11.0"
+
+[settings]
+# 글로벌 ~/.tool-versions (예: asdf의 sbcl 등)과 충돌하지 않도록 외부 설정을 무시합니다.
+ignored_config_paths = ["~/.tool-versions", "~/.config/mise"]
+disable_tools = ["sbcl"]
+
+[tools]
+# Node.js는 mise로 버전을 고정하고, Rust는 backend/rust-toolchain.toml(1.98.0)을 통해 관리합니다.
+node = "22"
+
+# ==============================================================================
+# 1. Frontend 태스크 (frontend/)
+# ==============================================================================
+
+[tasks."fe:install"]
+description = "프론트엔드 의존성 설치 (npm ci / npm install)"
+dir = "frontend"
+sources = ["package.json", "package-lock.json", "packages/*/package.json", "apps/*/package.json"]
+outputs = ["node_modules/.package-lock.json"]
+run = "if [ -f package-lock.json ]; then npm ci --no-audit --no-fund; else npm install --no-audit --no-fund; fi"
+run_windows = 'cmd.exe /d /c "if exist package-lock.json (npm ci --no-audit --no-fund) else (npm install --no-audit --no-fund)"'
+
+[tasks."fe:format"]
+description = "프론트엔드 코드 포맷팅 (Prettier)"
+dir = "frontend"
+run = "npm run --silent format"
+
+[tasks."fe:format:check"]
+description = "프론트엔드 포맷팅 검사 (파일 수정 안 함)"
+dir = "frontend"
+run = "npm run --silent format:check"
+
+[tasks."fe:lint"]
+description = "프론트엔드 린트 검사 (ESLint)"
+dir = "frontend"
+run = "npm run --silent lint"
+
+[tasks."fe:lint:fix"]
+description = "프론트엔드 린트 자동 수정 (ESLint --fix)"
+dir = "frontend"
+run = "npx eslint . --fix"
+
+[tasks."fe:typecheck"]
+description = "프론트엔드 TypeScript 타입 검사 (tsc -b)"
+dir = "frontend"
+run = "npm run --silent typecheck"
+
+[tasks."fe:test"]
+description = "프론트엔드 단위/통합 테스트 (Vitest)"
+dir = "frontend"
+run = "npm run --silent test"
+
+[tasks."fe:build"]
+description = "프론트엔드 프로덕션 빌드 (apps/web/dist/)"
+dir = "frontend"
+sources = [
+  "package.json",
+  "tsconfig*.json",
+  "packages/**/*",
+  "apps/**/*"
+]
+outputs = ["apps/web/dist/**/*"]
+run = "npm run --silent build"
+
+[tasks."fe:dev"]
+description = "프론트엔드 개발 서버 실행 (기본 http://localhost:5173)"
+dir = "frontend"
+run = "npm run --silent dev --"
+
+[tasks."fe:preview"]
+description = "프론트엔드 빌드 결과 미리 보기"
+dir = "frontend"
+depends = ["fe:build"]
+run = "npm run --silent preview --"
+
+[tasks."catalog:generate"]
+description = "공통 작업 양식 생성"
+run = "node tools/catalog/generate.mjs"
+
+[tasks."catalog:check"]
+description = "공통 작업 양식 생성물 검사"
+run = "node tools/catalog/generate.mjs --check"
+
+[tasks."architecture:check"]
+description = "workspace 의존성 경계 검사"
+run = "node tools/architecture/check.mjs"
+
+[tasks."tools:test"]
+description = "외부 의존성 없는 계약 생성, 의존성 경계와 개발 실행기 테스트"
+run = "node --test tools/catalog/*.test.mjs tools/architecture/boundaries.test.mjs tools/launchers/*.test.mjs"
+
+[tasks."fe:check"]
+description = "프론트엔드 CI 통합 검사 (format:check + lint + typecheck + test)"
+dir = "frontend"
+depends = ["fe:install"]
+run = "npm run --silent check"
+
+[tasks."fe:all"]
+description = "프론트엔드 전체 파이프라인 (install → format → lint → test → build)"
+dir = "frontend"
+depends = ["fe:install"]
+run = [
+  "npm run --silent format",
+  "npm run --silent lint",
+  "npm run --silent test",
+  "npm run --silent build"
+]
+
+[tasks."fe:clean"]
+description = "프론트엔드 빌드 산출물 및 node_modules 삭제"
+dir = "frontend"
+run = "rm -rf apps/web/dist node_modules packages/*/node_modules apps/*/node_modules"
+run_windows = "foreach ($d in 'apps/web/dist', 'node_modules') { if (Test-Path $d) { Remove-Item $d -Recurse -Force } }"
+
+# ==============================================================================
+# 2. Backend 태스크 (backend/)
+# ==============================================================================
+
+[tasks."be:install"]
+description = "백엔드 크레이트 의존성 다운로드 (cargo fetch)"
+dir = "backend"
+sources = ["Cargo.toml", "Cargo.lock", "crates/*/*/Cargo.toml", "crates/testing/Cargo.toml", "apps/*/Cargo.toml"]
+run = "cargo fetch --locked"
+
+[tasks."be:format"]
+description = "백엔드 코드 포맷팅 (cargo fmt)"
+dir = "backend"
+run = "cargo fmt --all"
+
+[tasks."be:format:check"]
+description = "백엔드 포맷팅 검사 (파일 수정 안 함)"
+dir = "backend"
+run = "cargo fmt --all -- --check"
+
+[tasks."be:lint"]
+description = "백엔드 린트 검사 (cargo clippy)"
+dir = "backend"
+run = "cargo clippy --workspace --all-targets -- -D warnings"
+
+[tasks."be:lint:fix"]
+description = "백엔드 린트 자동 수정 (cargo clippy --fix)"
+dir = "backend"
+run = "cargo clippy --workspace --all-targets --fix --allow-dirty --allow-staged"
+
+[tasks."be:typecheck"]
+description = "백엔드 컴파일/타입 검사 (cargo check)"
+dir = "backend"
+run = "cargo check --workspace --all-targets"
+
+[tasks."be:test"]
+description = "백엔드 전체 워크스페이스 테스트 (cargo test)"
+dir = "backend"
+run = "cargo test --workspace"
+
+[tasks."be:build"]
+description = "백엔드 빌드 (cargo build --workspace)"
+dir = "backend"
+run = "cargo build --workspace"
+
+[tasks."be:dev"]
+description = "백엔드 API 서버 실행 (기본 http://127.0.0.1:8080)"
+dir = "backend"
+run = "cargo run -p process-flow-server"
+
+[tasks."be:check"]
+description = "백엔드 CI 통합 검사 (format:check + lint + typecheck + test)"
+dir = "backend"
+depends = ["catalog:check", "architecture:check", "tools:test"]
+run = [
+  "cargo fmt --all -- --check",
+  "cargo clippy --workspace --all-targets -- -D warnings",
+  "cargo check --workspace --all-targets",
+  "cargo test --workspace"
+]
+
+[tasks."be:all"]
+description = "백엔드 전체 파이프라인 (format → lint → test → build)"
+dir = "backend"
+run = [
+  "cargo fmt --all",
+  "cargo clippy --workspace --all-targets -- -D warnings",
+  "cargo test --workspace",
+  "cargo build --workspace"
+]
+
+[tasks."be:clean"]
+description = "백엔드 빌드 산출물(target/) 삭제"
+dir = "backend"
+run = "cargo clean"
+
+# ==============================================================================
+# 3. 전체(Frontend + Backend) 통합 태스크
+# ==============================================================================
+
+[tasks.install]
+description = "전체(frontend + backend) 의존성 준비"
+depends = ["fe:install", "be:install"]
+
+[tasks.format]
+description = "전체(frontend + backend) 코드 포맷팅"
+depends = ["fe:format", "be:format"]
+
+[tasks."format:check"]
+description = "전체(frontend + backend) 포맷팅 검사"
+depends = ["fe:format:check", "be:format:check"]
+
+[tasks.lint]
+description = "전체(frontend + backend) 린트 검사"
+depends = ["fe:lint", "be:lint"]
+
+[tasks."lint:fix"]
+description = "전체(frontend + backend) 린트 자동 수정"
+depends = ["fe:lint:fix", "be:lint:fix"]
+
+[tasks.typecheck]
+description = "전체(frontend + backend) 타입/컴파일 검사"
+depends = ["fe:typecheck", "be:typecheck"]
+
+[tasks.test]
+description = "전체(frontend + backend) 테스트 실행"
+run = [{ task = "fe:test" }, { task = "be:test" }]
+
+[tasks.build]
+description = "전체(frontend + backend) 빌드"
+depends = ["fe:build", "be:build"]
+
+[tasks.check]
+description = "전체(frontend + backend) CI 통합 검사"
+run = [{ task = "fe:check" }, { task = "be:check" }]
+
+[tasks.all]
+description = "전체(frontend + backend) 파이프라인 (install → format → lint → test → build)"
+run = [{ task = "fe:all" }, { task = "be:all" }]
+
+[tasks.dev]
+description = "전체(frontend + backend) 개발 서버 동시 실행"
+depends = ["fe:dev", "be:dev"]
+
+[tasks.clean]
+description = "전체(frontend + backend) 빌드 산출물 및 캐시 정리"
+depends = ["fe:clean", "be:clean"]

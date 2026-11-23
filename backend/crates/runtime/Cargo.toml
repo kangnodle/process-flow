@@ -1,0 +1,22 @@
+[package]
+name = "process-flow-runtime"
+description = "유스케이스 실행: 순수 정책과 주입된 포트를 조율합니다."
+
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]
+process-flow-domain.workspace = true
+process-flow-application.workspace = true
+futures-util.workspace = true
+
+[dev-dependencies]
+async-trait.workspace = true
+process-flow-testing.workspace = true
+tokio.workspace = true
+
+[lints]
+workspace = true

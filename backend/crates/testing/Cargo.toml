@@ -1,0 +1,17 @@
+[package]
+name = "process-flow-testing"
+description = "테스트 지원: 모든 포트의 메모리 구현과 결정적인 가짜(시계·ID·토큰·해셔·임베더), 조립된 서비스 묶음."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]
+process-flow-domain.workspace = true
+process-flow-application.workspace = true
+process-flow-runtime.workspace = true
+async-trait.workspace = true
+
+[lints]
+workspace = true

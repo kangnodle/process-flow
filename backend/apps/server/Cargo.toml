@@ -1,0 +1,39 @@
+[package]
+name = "process-flow-server"
+description = "실행 파일: 설정을 읽고 어댑터를 만들어 유스케이스와 HTTP 서버를 조립합니다(Composition Root)."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[[bin]]
+name = "process-flow-server"
+path = "src/main.rs"
+
+[dependencies]
+process-flow-domain.workspace = true
+process-flow-application.workspace = true
+process-flow-runtime.workspace = true
+process-flow-adapter-process-cache.workspace = true
+process-flow-adapter-sqlite.workspace = true
+process-flow-adapter-lancedb.workspace = true
+tokio = { workspace = true, features = ["sync", "time"] }
+sqlx = { version = "0.8.6", default-features = false, features = ["sqlite", "runtime-tokio"] }
+process-flow-adapter-security.workspace = true
+process-flow-adapter-embedding.workspace = true
+process-flow-adapter-system.workspace = true
+process-flow-api.workspace = true
+actix-cors.workspace = true
+actix-web.workspace = true
+tracing.workspace = true
+tracing-subscriber.workspace = true
+
+[lints]
+workspace = true
+
+[target.'cfg(unix)'.dev-dependencies]
+reqwest = { version = "0.13", default-features = false, features = ["blocking", "json", "query"] }
+rustix = { version = "1", features = ["process"] }
+serde_json.workspace = true
+tempfile = "3"

@@ -1,0 +1,31 @@
+# crates/core/* (domain, application)는 순수 계층입니다. 부수효과는 포트로 받고 구현은 crates/adapters/*에 둡니다.
+# Clippy는 크레이트 디렉터리에서 위로 올라가며 clippy.toml을 찾으므로, 이 파일은 core 아래 크레이트에만 적용됩니다.
+
+disallowed-methods = [
+  { path = "std::time::SystemTime::now", reason = "현재 시각은 Clock 포트로 받으세요." },
+  { path = "std::time::Instant::now", reason = "현재 시각은 Clock 포트로 받으세요." },
+  { path = "std::env::var", reason = "환경 변수는 apps/server의 설정에서만 읽습니다." },
+  { path = "std::env::var_os", reason = "환경 변수는 apps/server의 설정에서만 읽습니다." },
+  { path = "std::env::vars", reason = "환경 변수는 apps/server의 설정에서만 읽습니다." },
+  { path = "std::env::args", reason = "명령행 인자는 apps/server에서만 읽습니다." },
+  { path = "std::thread::spawn", reason = "스레드는 어댑터나 실행 파일에서 만듭니다." },
+  { path = "std::thread::sleep", reason = "기다림은 부수효과입니다. 어댑터에서 처리하세요." },
+  { path = "std::fs::read", reason = "파일 I/O는 어댑터에서 하세요." },
+  { path = "std::fs::read_to_string", reason = "파일 I/O는 어댑터에서 하세요." },
+  { path = "std::fs::write", reason = "파일 I/O는 어댑터에서 하세요." },
+]
+
+disallowed-types = [
+  { path = "std::fs::File", reason = "파일 I/O는 어댑터에서 하세요." },
+  { path = "std::net::TcpStream", reason = "네트워크는 어댑터에서 하세요." },
+  { path = "std::net::TcpListener", reason = "네트워크는 어댑터에서 하세요." },
+  { path = "std::net::UdpSocket", reason = "네트워크는 어댑터에서 하세요." },
+  { path = "std::process::Command", reason = "프로세스 실행은 어댑터에서 하세요." },
+]
+
+disallowed-macros = [
+  { path = "std::println", reason = "출력은 부수효과입니다. 결과를 값으로 돌려주세요." },
+  { path = "std::eprintln", reason = "출력은 부수효과입니다. 결과를 값으로 돌려주세요." },
+  { path = "std::print", reason = "출력은 부수효과입니다. 결과를 값으로 돌려주세요." },
+  { path = "std::dbg", reason = "디버그 출력을 남기지 마세요." },
+]

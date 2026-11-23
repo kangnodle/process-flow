@@ -1,0 +1,11 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "tsBuildInfoFile": "../../node_modules/.tmp/react.tsbuildinfo",
+    // DOM 타입을 빼서 Provider가 브라우저 API를 직접 쓰면 컴파일 오류가 나게 합니다.
+    "lib": ["ES2022"],
+    "types": [],
+    "jsx": "react-jsx"
+  },
+  "include": ["src"]
+}

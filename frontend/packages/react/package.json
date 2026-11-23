@@ -1,0 +1,22 @@
+{
+  "name": "@process-flow/react",
+  "version": "0.1.0",
+  "private": true,
+  "description": "React 바인딩: 유스케이스와 포트를 Provider·컨텍스트·훅으로 연결합니다. 화면과 브라우저 API를 모릅니다.",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@process-flow/domain": "0.1.0",
+    "@process-flow/application": "0.1.0",
+    "@process-flow/runtime": "0.1.0"
+  },
+  "peerDependencies": {
+    "react": "^19.3.1"
+  },
+  "scripts": {
+    "typecheck": "tsc -b"
+  }
+}

@@ -1,0 +1,20 @@
+[package]
+name = "process-flow-adapter-process-cache"
+description = "공정 저장소 포트의 메모리 캐시 데코레이터."
+
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]
+process-flow-domain.workspace = true
+process-flow-application.workspace = true
+async-trait.workspace = true
+
+[dev-dependencies]
+tokio.workspace = true
+
+[lints]
+workspace = true

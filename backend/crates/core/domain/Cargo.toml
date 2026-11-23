@@ -1,0 +1,17 @@
+[package]
+name = "process-flow-domain"
+description = "순수 도메인: 공정 모델과 진행 규칙. I/O·비동기·직렬화 의존성이 없습니다."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish.workspace = true
+
+# 의도적으로 의존성이 없습니다. 이 크레이트에 외부 크레이트를 추가하지 마세요.
+[dependencies]
+
+[lints]
+workspace = true
+
+[dev-dependencies]
+serde_json.workspace = true
