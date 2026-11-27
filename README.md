@@ -87,3 +87,7 @@ Pop-Location
 - [백엔드 API, 저장소 운영, 검색 색인 복구](backend/README.md)
 - [부하 테스트](tests/benchmark/README.md)
 - [변경 이력](docs/CHANGELOG.md)
+
+## 라이선스
+
+Process Flow는 독점 소프트웨어이며 모든 권리는 저작권자에게 있습니다. 사용 및 배포 조건은 저장소 루트의 [LICENSE](LICENSE)를 따릅니다. 서드파티 구성 요소에는 각 구성 요소의 라이선스가 적용됩니다.

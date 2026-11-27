@@ -2,6 +2,7 @@
   "name": "@process-flow/ui",
   "version": "0.1.0",
   "private": true,
+  "license": "UNLICENSED",
   "description": "화면: Fluent UI 컴포넌트·뷰·페이지·문구(i18n)·테마. 어댑터와 브라우저 API를 모릅니다.",
   "type": "module",
   "sideEffects": false,

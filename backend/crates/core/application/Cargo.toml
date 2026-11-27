@@ -4,7 +4,7 @@ description = "애플리케이션 계층: 순수 정책과 포트 계약. 도메
 version.workspace = true
 edition.workspace = true
 rust-version.workspace = true
-license.workspace = true
+license-file.workspace = true
 publish.workspace = true
 
 [dependencies]

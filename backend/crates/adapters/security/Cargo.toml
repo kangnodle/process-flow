@@ -4,7 +4,7 @@ description = "어댑터: PasswordHasher(argon2id)·TokenGenerator(난수 토큰
 version.workspace = true
 edition.workspace = true
 rust-version.workspace = true
-license.workspace = true
+license-file.workspace = true
 publish.workspace = true
 
 [dependencies]

@@ -1,6 +1,7 @@
 {
   "name": "@process-flow/web",
   "private": true,
+  "license": "UNLICENSED",
   "version": "0.1.0",
   "description": "조립 지점(composition root): 어댑터를 만들어 포트에 꽂고, Provider와 화면을 쌓아 실행합니다.",
   "type": "module",

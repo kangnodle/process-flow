@@ -7,7 +7,7 @@ default-members = ["apps/server"]
 version = "0.1.0"
 edition = "2024"
 rust-version = "1.98"
-license = "MIT"
+license-file = "../LICENSE"
 publish = false
 
 [workspace.dependencies]

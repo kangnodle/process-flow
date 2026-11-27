@@ -4,7 +4,7 @@ description = "표현 계층: Actix Web 라우트, 요청/응답 DTO, 오류 →
 version.workspace = true
 edition.workspace = true
 rust-version.workspace = true
-license.workspace = true
+license-file.workspace = true
 publish.workspace = true
 
 [dependencies]

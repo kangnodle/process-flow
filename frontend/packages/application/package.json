@@ -2,6 +2,7 @@
   "name": "@process-flow/application",
   "version": "0.1.0",
   "private": true,
+  "license": "UNLICENSED",
   "description": "순수 애플리케이션 정책, 포트, 라우트, 뷰모델. 도메인에만 의존합니다.",
   "type": "module",
   "sideEffects": false,

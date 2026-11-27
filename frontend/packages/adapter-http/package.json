@@ -2,6 +2,7 @@
   "name": "@process-flow/adapter-http",
   "version": "0.1.0",
   "private": true,
+  "license": "UNLICENSED",
   "description": "어댑터: 저장소 포트를 백엔드 HTTP API(fetch)로 구현합니다.",
   "type": "module",
   "sideEffects": false,

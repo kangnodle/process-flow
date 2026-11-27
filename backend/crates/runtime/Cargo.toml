@@ -5,7 +5,7 @@ description = "유스케이스 실행: 순수 정책과 주입된 포트를 조�
 version.workspace = true
 edition.workspace = true
 rust-version.workspace = true
-license.workspace = true
+license-file.workspace = true
 publish.workspace = true
 
 [dependencies]

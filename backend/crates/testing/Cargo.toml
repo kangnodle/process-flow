@@ -4,7 +4,7 @@ description = "테스트 지원: 모든 포트의 메모리 구현과 결정적�
 version.workspace = true
 edition.workspace = true
 rust-version.workspace = true
-license.workspace = true
+license-file.workspace = true
 publish.workspace = true
 
 [dependencies]

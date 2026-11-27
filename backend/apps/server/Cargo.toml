@@ -4,7 +4,7 @@ description = "실행 파일: 설정을 읽고 어댑터를 만들어 유스케�
 version.workspace = true
 edition.workspace = true
 rust-version.workspace = true
-license.workspace = true
+license-file.workspace = true
 publish.workspace = true
 
 [[bin]]
